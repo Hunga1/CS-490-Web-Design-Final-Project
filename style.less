@@ -1,0 +1,534 @@
+/*
+ *  CS490 - Project LESS stylesheet
+ *  Author: Aaron Hung
+ */
+
+/* Colors */
+@sidebar-namecard-font-color: #f7f7f7;
+@sidebar-link-color: #787878;
+
+@profile-text-color: @sidebar-namecard-font-color;
+
+/* Font Sizes */
+// Name card component
+@name-card-name-size-xs: 2.4rem;
+@name-card-name-size-sm: @name-card-name-size-xs * 1.25;
+@name-card-name-size-md: @name-card-name-size-xs * 1.25;
+
+@name-card-jtitle-size-xs: 1.6rem;
+@name-card-jtitle-size-sm: @name-card-jtitle-size-xs * 1.25;
+@name-card-jtitle-size-md: @name-card-jtitle-size-xs * 1.25;
+
+// Side panel links
+@side-panel-link-size-xs: 1.4rem;
+@side-panel-link-size-sm: @side-panel-link-size-xs * 1.25;
+@side-panel-link-size-md: @side-panel-link-size-xs * 1.25;
+
+// Profile section
+@profile-subtitle-size-xs: 1.4rem;
+@profile-subtitle-size-sm: @profile-subtitle-size-xs * 1.25;
+@profile-subtitle-size-md: @profile-subtitle-size-xs * 1.25;
+
+@profile-text-size-xs: 1.2rem;
+@profile-text-size-sm: @profile-text-size-xs * 1.25;
+@profile-text-size-md: @profile-text-size-xs * 1.25;
+
+@skills-text-size-xs: 1.2rem;
+@skills-text-size-sm: @skills-text-size-xs * 1.25;
+@skills-text-size-md: @skills-text-size-xs * 1.25;
+
+// Work section
+@work-subtitle-size-xs: 1.4rem;
+@work-subtitle-size-sm: @work-subtitle-size-xs * 1.25;
+@work-subtitle-size-md: @work-subtitle-size-xs * 1.25;
+
+@work-text-size-xs: 1.2rem;
+@work-text-size-sm: @work-text-size-xs * 1.25;
+@work-text-size-md: @work-text-size-xs * 1.25;
+
+/* Responsive Breakpoints */
+@breakpoint-sm: 445px;
+@breakpoint-md: 770px;
+@breakpoint-lg: 1120px;
+
+/* Layout */
+@side-bar-top-offset-xs: 100px;
+@side-bar-top-offset-sm: @side-bar-top-offset-xs + 15.75;
+@side-bar-top-offset-md: @side-bar-top-offset-xs + 15.75;
+
+/* Viewport Independent */
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: url("images/macbook_1920x1080.jpg") no-repeat center center fixed;
+}
+
+.side-panel {
+	background-color: hsla(0, 0%, 0%, 0.85);
+    background-color: rgba(0, 0, 0, 0.85);
+    #name, .jtitle {
+    	color: @sidebar-namecard-font-color;
+    }
+	a {
+		transition: color 0.25s ease-in;
+		&:link {
+			.nolink(@sidebar-link-color);
+		}
+		&:visited {
+			.nolink(@sidebar-link-color);
+		}
+		&:hover {
+			.nolink(#f7f7f7);
+		}
+		&:active {
+			.nolink(#f7f7f7);
+		}
+	}
+	ul {
+		padding: 0px;
+		margin: 0px;
+	}
+	z-index: 1;
+}
+
+.main-panel {
+	color: @profile-text-color;
+	#profile-picture {
+		border-radius: 5px;
+	}
+	.profile-content {
+		background-color: hsla(0, 0%, 0%, 0.85);
+		background-color: rgba(0, 0, 0, 0.85);
+		border-radius: 5px;
+	}
+	.skill-content {
+		background-color: hsla(0, 0%, 0%, 0.85);
+		background-color: rgba(0, 0, 0, 0.85);
+		border-radius: 5px;
+	}
+	.work-content {
+		background-color: hsla(0, 0%, 0%, 0.85);
+		background-color: rgba(0, 0, 0, 0.85);
+		border-radius: 5px;
+	}
+}
+
+.clearfix:after {
+	content: "";
+    display: table;
+    clear: both;
+}
+
+/* End of Viewport Independent*/
+
+/* Responsive Styling */
+@media screen and (max-width: @breakpoint-sm) {
+	.side-panel {
+		padding: 10px;
+
+		#name {
+			font-size: @name-card-name-size-xs;
+			margin-bottom: 5px;
+		}
+		.jtitle {
+			font-size: @name-card-jtitle-size-xs;
+		}
+		.name-card {
+			margin-bottom: 10px;
+		}
+
+		nav a {
+			font-size: @side-panel-link-size-xs;
+			padding: 5px;
+		}
+		nav i {
+			padding-left: 5px;
+		}
+	}
+
+	.profile {
+		width: 70%;
+		padding-top: @side-bar-top-offset-xs;
+		margin-left: 15%;
+		margin-right: 15%;
+		#profile-picture {
+			width: 100%;
+			margin-top: 30px;
+		}
+		.profile-content {
+			padding: 10px;
+		}
+		.profile-subtitle {
+			font-size: @profile-subtitle-size-xs;
+		}
+		.profile-text {
+			font-size: @profile-text-size-xs;
+		}
+	}
+
+	.skills {
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+		padding-top: @side-bar-top-offset-xs;
+		.skill-content {
+			padding: 10px;
+		}
+	}
+
+	.work {
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+		margin-bottom: 80px;
+		padding-top: @side-bar-top-offset-xs;
+		.work-content {
+			padding: 10px;
+		}
+		.work-header {
+			font-size: @work-subtitle-size-xs;
+			margin-bottom: 5px;
+		}
+		.work-subtitle {
+			font-size: @work-subtitle-size-xs;
+		}
+		.work-text {
+			font-size: @work-text-size-xs;
+		}
+	}
+}
+
+@media (min-width: @breakpoint-sm) and (max-width: @breakpoint-md) {
+	.side-panel {
+		padding: 10px;
+
+		#name {
+			font-size: @name-card-name-size-sm;
+			margin-bottom: 5px;
+		}
+		.jtitle {
+			font-size: @name-card-jtitle-size-sm;
+		}
+		.name-card {
+			margin-bottom: 10px;
+		}
+
+		nav a {
+			font-size: @side-panel-link-size-sm;
+			padding: 5px;
+			margin: 0px 7.5px 0px 7.5px; 
+		}
+		nav i {
+			padding-left: 8px;
+		}
+	}
+	.profile {
+		width: 70%;
+		padding-top: @side-bar-top-offset-xs;
+		margin-left: 15%;
+		margin-right: 15%;
+		#profile-picture {
+			width: 70%;
+			margin-top: 30px;
+			padding-left: 15%;
+			padding-right: 15%;
+		}
+		.profile-content {
+			padding: 15px;
+		}
+		.profile-subtitle {
+			font-size: @profile-subtitle-size-sm;
+		}
+		.profile-text {
+			font-size: @profile-text-size-sm;
+		}
+	}
+
+	.skills {
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+		padding-top: @side-bar-top-offset-xs;
+		.skill-content {
+			padding: 15px;
+		}
+	}
+
+	.work {
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+		margin-bottom: 80px;
+		padding-top: @side-bar-top-offset-xs;
+		.work-content {
+			padding: 15px;
+		}
+		.work-header {
+			font-size: @work-subtitle-size-sm;
+			margin-bottom: 5px;
+		}
+		.work-subtitle {
+			font-size: @work-subtitle-size-sm;
+		}
+		.work-text {
+			font-size: @work-text-size-sm;
+		}
+	}
+}
+
+@media (min-width: @breakpoint-md) and (max-width: @breakpoint-lg) {
+	.side-panel {
+		padding: 10px;
+
+		#name {
+			font-size: @name-card-name-size-md;
+			margin-bottom: 5px;
+		}
+		.jtitle {
+			font-size: @name-card-jtitle-size-md;
+		}
+		.name-card {
+			margin-bottom: 10px;
+		}
+
+		nav a {
+			font-size: @side-panel-link-size-md;
+			padding: 5px;
+			margin: 0px 10px 0px 10px; 
+		}
+		nav i {
+			padding-left: 5px;
+		}
+	}
+
+	.profile {
+		width: 80%;
+		padding-top: @side-bar-top-offset-xs;
+		margin-left: 10%;
+		margin-right: 10%;
+		#profile-picture {
+			width: 40%;
+			margin-top: 30px;
+			padding-left: 30%;
+			padding-right: 30%;
+		}
+		.profile-content {
+			padding: 2.5%;
+		}
+		.profile-column {
+			float: left;
+			width: 45%;
+			padding: 2.5%;
+		}
+		.profile-subtitle {
+			font-size: @profile-subtitle-size-md;
+		}
+		.profile-text {
+			font-size: @profile-text-size-md;
+		}
+	}
+
+	.skills {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		padding-top: @side-bar-top-offset-xs;
+		.skill-content {
+			padding: 15px;
+		}
+	}
+
+	.work {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-bottom: 80px;
+		padding-top: @side-bar-top-offset-xs;
+		.work-content {
+			padding: 15px;
+		}
+		.work-header {
+			font-size: @work-subtitle-size-md;
+			margin-bottom: 5px;
+		}
+		.work-subtitle {
+			font-size: @work-subtitle-size-md;
+		}
+		.work-text {
+			font-size: @work-text-size-md;
+		}
+	}
+}
+
+@media all and (max-width: @breakpoint-lg) {
+	/* Sidebar resides on top of content */
+	.side-panel {
+		position: fixed;
+		width: 100%;
+	}
+	.name-card {
+		text-align: center;
+		#lname {
+			padding-left: 3px;
+		}
+	}
+
+	nav ul {
+		text-align: center;
+	}
+
+	nav ul li {
+		display: inline-block;
+	}
+
+	#footer {
+		text-align: center;
+		font-size: @work-text-size-xs;
+	}
+}
+
+@media (min-width: @breakpoint-lg) {
+	.side-panel {
+		position: fixed;
+		height: 100%;
+		left: 0;
+		width: 30%;
+			#name {
+				text-align: right;
+				font-size: @name-card-name-size-md;
+				margin-bottom: 5px;
+				#lname {
+					padding-left: 4px;
+				}
+			}
+			.jtitle {
+				text-align: right;
+				font-size: @name-card-jtitle-size-md;
+			}
+			.name-card {
+				margin-top: 20%;
+				margin-bottom: 10px;
+				padding-right: 10px
+			}
+
+			nav ul {
+				text-align: right;
+				padding-right: 10px
+			}
+			nav li {
+				margin-top: 25px;
+				margin-bottom: 25px;
+			}
+			nav a {
+				font-size: @side-panel-link-size-md;
+				padding: 5px;
+			}
+			nav i {
+				padding-left: 5px;
+			}
+		}
+
+		#name {
+			font-size: @name-card-name-size-xs;
+			margin-bottom: 5px;
+		}
+		.jtitle {
+			font-size: @name-card-jtitle-size-xs;
+		}
+		.name-card {
+			margin-bottom: 10px;
+		}
+
+		nav a {
+			font-size: @side-panel-link-size-xs;
+			padding: 5px;
+		}
+		nav i {
+			padding-left: 5px;
+		}
+
+	.main-panel {
+		position: absolute;
+		right: 0;
+		width: 70%;
+	}
+
+	footer {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 70%;
+	}
+
+	.profile {
+		width: 80%;
+		padding-top: @side-bar-top-offset-xs;
+		margin-left: 10%;
+		margin-right: 10%;
+		#profile-picture {
+			width: 40%;
+			margin-top: 30px;
+			padding-left: 30%;
+			padding-right: 30%;
+		}
+		.profile-content {
+			padding: 2.5%;
+		}
+		.profile-column {
+			float: left;
+			width: 45%;
+			padding: 2.5%;
+		}
+		.profile-subtitle {
+			font-size: @profile-subtitle-size-md;
+		}
+		.profile-text {
+			font-size: @profile-text-size-md;
+		}
+	}
+
+	.skills {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		padding-top: @side-bar-top-offset-xs;
+		.skill-content {
+			padding: 15px;
+		}
+	}
+
+	.work {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-bottom: 80px;
+		padding-top: @side-bar-top-offset-xs;
+		.work-content {
+			padding: 15px;
+		}
+		.work-header {
+			font-size: @work-subtitle-size-md;
+			margin-bottom: 5px;
+		}
+		.work-subtitle {
+			font-size: @work-subtitle-size-md;
+		}
+		.work-text {
+			font-size: @work-text-size-md;
+		}
+	}
+
+	#footer {
+		text-align: center;
+		font-size: @work-text-size-xs;
+	}
+}
+
+
+/* Mixins */
+.nolink(@color) {
+	text-decoration: none;
+	color: @color;
+}

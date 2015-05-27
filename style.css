@@ -1,0 +1,446 @@
+/*
+ *  CS490 - Project LESS stylesheet
+ *  Author: Aaron Hung
+ */
+/* Colors */
+/* Font Sizes */
+/* Responsive Breakpoints */
+/* Layout */
+/* Viewport Independent */
+html {
+  font-size: 62.5%;
+}
+body {
+  background: url("images/macbook_1920x1080.jpg") no-repeat center center fixed;
+}
+.side-panel {
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+}
+.side-panel #name,
+.side-panel .jtitle {
+  color: #f7f7f7;
+}
+.side-panel a {
+  transition: color 0.25s ease-in;
+}
+.side-panel a:link {
+  text-decoration: none;
+  color: #787878;
+}
+.side-panel a:visited {
+  text-decoration: none;
+  color: #787878;
+}
+.side-panel a:hover {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+.side-panel a:active {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+.side-panel ul {
+  padding: 0px;
+  margin: 0px;
+}
+.main-panel {
+  color: #f7f7f7;
+}
+.main-panel #profile-picture {
+  border-radius: 5px;
+}
+.main-panel .profile-content {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
+}
+.main-panel .skill-content {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
+}
+.main-panel .work-content {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* End of Viewport Independent*/
+/* Responsive Styling */
+@media screen and (max-width: 445px) {
+  .side-panel {
+    padding: 10px;
+  }
+  .side-panel #name {
+    font-size: 2.4rem;
+    margin-bottom: 5px;
+  }
+  .side-panel .jtitle {
+    font-size: 1.6rem;
+  }
+  .side-panel .name-card {
+    margin-bottom: 10px;
+  }
+  .side-panel nav a {
+    font-size: 1.4rem;
+    padding: 5px;
+  }
+  .side-panel nav i {
+    padding-left: 5px;
+  }
+  .profile {
+    width: 70%;
+    padding-top: 100px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .profile #profile-picture {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .profile .profile-content {
+    padding: 10px;
+  }
+  .profile .profile-subtitle {
+    font-size: 1.4rem;
+  }
+  .profile .profile-text {
+    font-size: 1.2rem;
+  }
+  .skills {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 100px;
+  }
+  .skills .skill-content {
+    padding: 10px;
+  }
+  .work {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 80px;
+    padding-top: 100px;
+  }
+  .work .work-content {
+    padding: 10px;
+  }
+  .work .work-header {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+  .work .work-subtitle {
+    font-size: 1.4rem;
+  }
+  .work .work-text {
+    font-size: 1.2rem;
+  }
+  .work ul {
+    padding: 0;
+  }
+}
+@media (min-width: 445px) and (max-width: 770px) {
+  .side-panel {
+    padding: 10px;
+  }
+  .side-panel #name {
+    font-size: 3rem;
+    margin-bottom: 5px;
+  }
+  .side-panel .jtitle {
+    font-size: 2rem;
+  }
+  .side-panel .name-card {
+    margin-bottom: 10px;
+  }
+  .side-panel nav a {
+    font-size: 1.75rem;
+    padding: 5px;
+    margin: 0px 7.5px 0px 7.5px;
+  }
+  .side-panel nav i {
+    padding-left: 8px;
+  }
+  .profile {
+    width: 70%;
+    padding-top: 100px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .profile #profile-picture {
+    width: 70%;
+    margin-top: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .profile .profile-content {
+    padding: 15px;
+  }
+  .profile .profile-subtitle {
+    font-size: 1.75rem;
+  }
+  .profile .profile-text {
+    font-size: 1.5rem;
+  }
+  .skills {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 100px;
+  }
+  .skills .skill-content {
+    padding: 15px;
+  }
+  .work {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 80px;
+    padding-top: 100px;
+  }
+  .work .work-content {
+    padding: 15px;
+  }
+  .work .work-header {
+    font-size: 1.75rem;
+    margin-bottom: 5px;
+  }
+  .work .work-subtitle {
+    font-size: 1.75rem;
+  }
+  .work .work-text {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 770px) and (max-width: 1120px) {
+  .side-panel {
+    padding: 10px;
+  }
+  .side-panel #name {
+    font-size: 3rem;
+    margin-bottom: 5px;
+  }
+  .side-panel .jtitle {
+    font-size: 2rem;
+  }
+  .side-panel .name-card {
+    margin-bottom: 10px;
+  }
+  .side-panel nav a {
+    font-size: 1.75rem;
+    padding: 5px;
+    margin: 0px 10px 0px 10px;
+  }
+  .side-panel nav i {
+    padding-left: 5px;
+  }
+  .profile {
+    width: 80%;
+    padding-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .profile #profile-picture {
+    width: 40%;
+    margin-top: 30px;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  .profile .profile-content {
+    padding: 2.5%;
+  }
+  .profile .profile-column {
+    float: left;
+    width: 45%;
+    padding: 2.5%;
+  }
+  .profile .profile-subtitle {
+    font-size: 1.75rem;
+  }
+  .profile .profile-text {
+    font-size: 1.5rem;
+  }
+  .skills {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 100px;
+  }
+  .skills .skill-content {
+    padding: 15px;
+  }
+  .work {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 80px;
+    padding-top: 100px;
+  }
+  .work .work-content {
+    padding: 15px;
+  }
+  .work .work-header {
+    font-size: 1.75rem;
+    margin-bottom: 5px;
+  }
+  .work .work-subtitle {
+    font-size: 1.75rem;
+  }
+  .work .work-text {
+    font-size: 1.5rem;
+  }
+}
+@media all and (max-width: 1120px) {
+  /* Sidebar resides on top of content */
+  .side-panel {
+    position: fixed;
+    width: 100%;
+  }
+  .name-card {
+    text-align: center;
+  }
+  .name-card #lname {
+    padding-left: 3px;
+  }
+  nav ul {
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  #footer {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1120px) {
+  .side-panel {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    width: 30%;
+  }
+  .side-panel #name {
+    text-align: right;
+    font-size: 3rem;
+    margin-bottom: 5px;
+  }
+  .side-panel #name #lname {
+    padding-left: 4px;
+  }
+  .side-panel .jtitle {
+    text-align: right;
+    font-size: 2rem;
+  }
+  .side-panel .name-card {
+    margin-top: 20%;
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
+  .side-panel nav ul {
+    text-align: right;
+    padding-right: 10px;
+  }
+  .side-panel nav li {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .side-panel nav a {
+    font-size: 1.75rem;
+    padding: 5px;
+  }
+  .side-panel nav i {
+    padding-left: 5px;
+  }
+  #name {
+    font-size: 2.4rem;
+    margin-bottom: 5px;
+  }
+  .jtitle {
+    font-size: 1.6rem;
+  }
+  .name-card {
+    margin-bottom: 10px;
+  }
+  nav a {
+    font-size: 1.4rem;
+    padding: 5px;
+  }
+  nav i {
+    padding-left: 5px;
+  }
+  .main-panel {
+    position: absolute;
+    right: 0;
+    width: 70%;
+  }
+  footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+  }
+  .profile {
+    width: 80%;
+    padding-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .profile #profile-picture {
+    width: 40%;
+    margin-top: 30px;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  .profile .profile-content {
+    padding: 2.5%;
+  }
+  .profile .profile-column {
+    float: left;
+    width: 45%;
+    padding: 2.5%;
+  }
+  .profile .profile-subtitle {
+    font-size: 1.75rem;
+  }
+  .profile .profile-text {
+    font-size: 1.5rem;
+  }
+  .skills {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 100px;
+  }
+  .skills .skill-content {
+    padding: 15px;
+  }
+  .work {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 80px;
+    padding-top: 100px;
+  }
+  .work .work-content {
+    padding: 15px;
+  }
+  .work .work-header {
+    font-size: 1.75rem;
+    margin-bottom: 5px;
+  }
+  .work .work-subtitle {
+    font-size: 1.75rem;
+  }
+  .work .work-text {
+    font-size: 1.5rem;
+  }
+  #footer {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+/* Mixins */
